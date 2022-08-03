@@ -12,6 +12,10 @@ const isType = (value: any, type: string): boolean => {
    return Object.prototype.toString.call(value) === `[object ${type}]` 
 }
 
+const style: Partial<CSSStyleDeclaration> = {
+  width: '100px',
+  marginTop: '100px',
+}
 
 class User {
   private listeners: Record<string, ListenerHandler[]> = {
@@ -98,7 +102,6 @@ class PubCenter extends User {
     })
   }
 }
-
 // export { PubCenter }
 
 // const pub = new PubCenter()

@@ -1,6 +1,5 @@
 
 type EventHandlerFn = (...args: any) => void;
-
 function useHtmlEvent(
   el: HTMLElement | Window | Document, 
   eventName: keyof HTMLElementEventMap, 

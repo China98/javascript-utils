@@ -1,5 +1,4 @@
 
-
 function isHexColor(color: string): boolean {
     return /^#([0-9a-fA-F]{3}|[0-9a-fA-f]{6})$/.test(color);
 }
