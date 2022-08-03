@@ -1,6 +1,6 @@
 
 
-export function isHexColor(color: string): boolean {
+function isHexColor(color: string): boolean {
     return /^#([0-9a-fA-F]{3}|[0-9a-fA-f]{6})$/.test(color);
 }
 
@@ -10,13 +10,13 @@ export function isHexColor(color: string): boolean {
   // 再转换为10进制， 16711680
   // 转为16进制则为 ff0000
   // g、b 同理  
-export function rgb_transform_hex(r: number, g: number, b: number) {
+function rgb_transform_hex(r: number, g: number, b: number) {
   const hex = ((r << 16) | (g << 8) | b).toString(16);
   return '#' + new Array(Math.abs(hex.length - 7)).join('0') + hex;
 }
 
 // 取12、34、56位 进行10进制转换
-export function hex_transform_rgb(hex: string) {
+function hex_transform_rgb(hex: string) {
     let sHex = hex.toLowerCase();
     if (isHexColor(hex)) {
       // 考虑到#fff、#333等类似情况
