@@ -5,4 +5,7 @@
   支持一次性订阅
   支持精准分发
 # 2.loop 定时器封装
-  
+# 3.color-transform 颜色转换 
+  rgb ---> hex
+  hex ---> rgb 
+# 4. 
