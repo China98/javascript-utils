@@ -1,4 +1,7 @@
 
+1.npm install typescript -g
+2.项目目录下 命令：tsc
+3.dist-compiler目录编译输出
 
 # 1.pub-sub 发布/订阅模式封装
   支持异步
@@ -9,3 +12,4 @@
   rgb ---> hex
   hex ---> rgb 
 # 4.html-element-event 事件监听封装
+# 5.storage 储存封装
