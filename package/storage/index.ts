@@ -18,7 +18,7 @@ class WebStorage {
   }
 
   getKey = (key: string): string => {
-    return `${this.prefix.toLocaleUpperCase}_${key}`
+    return `${this.prefix.toLocaleUpperCase()}_${key}`
   }
 
   set = (key: string, value: unknown, timeout?:number) => {
