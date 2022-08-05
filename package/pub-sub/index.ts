@@ -12,11 +12,6 @@ const isType = (value: any, type: string): boolean => {
    return Object.prototype.toString.call(value) === `[object ${type}]` 
 }
 
-const style: Partial<CSSStyleDeclaration> = {
-  width: '100px',
-  marginTop: '100px',
-}
-
 class User {
   private listeners: Record<string, ListenerHandler[]> = {
     
@@ -63,7 +58,7 @@ class PubCenter extends User {
 
     if(!listeners[name] || !listeners[name].length) return;
     
-     const filterResult: Record<'origin' | 'trigger', ListenerHandler[]> = listeners[name].reduce((store: any, current) => { 
+     const filterResult: Record<'origin' | 'trigger', ListenerHandler[]> = listeners[name].reduce((store: Record<'origin' | 'trigger', ListenerHandler[]>, current) => { 
         if(!isType(current, 'Function')) {
           const { id } = current as HanlderConfig || {}
           if(isType(query, 'String')) {
@@ -102,6 +97,10 @@ class PubCenter extends User {
     })
   }
 }
+
 // export { PubCenter }
 
 // const pub = new PubCenter()
+
+
+
