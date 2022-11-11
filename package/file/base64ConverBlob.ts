@@ -32,3 +32,8 @@ export function base64ToBlob(base64Buf: string): Blob {
         fileReader.readAsDataURL(blob);
     }) 
   }
+
+
+  export const createElement = (tagName: keyof HTMLElementTagNameMap)  => {
+    
+  }

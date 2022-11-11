@@ -56,7 +56,7 @@ class WebStorage {
   }
 
   remove = (key: string) => {
-    this.storage.removeItem(key);
+    this.storage.removeItem(this.getKey(key));
   }
 
   size = (): number => this.storage.length; 
